@@ -2649,7 +2649,6 @@ input, select, textarea {
 			font-size: 0.9em;
 			font-weight: 700;
 			padding: 0 0.75em 0.75em 0.75em;
-			text-align: left;
 		}
 
 		table thead {
@@ -2680,6 +2679,14 @@ input, select, textarea {
 
 			table.alt thead {
 				border-bottom: 0;
+			}
+
+			table.alt thead th {
+				text-align: left;
+			}
+
+			table.alt thead td {
+				text-align: left;
 			}
 
 			table.alt tfoot {
