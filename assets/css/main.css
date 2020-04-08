@@ -1976,37 +1976,6 @@ input, select, textarea {
 
 	/* portofolio */
 		
-			/* Design */
-			/* *,
-			*::before,
-			*::after {
-			box-sizing: border-box;
-			}
-
-			html {
-			background-color: #ecf9ff;
-			}
-
-			body {
-			color: #272727;
-			font-family: 'Raleway', serif;
-			font-style: normal;
-			font-weight: 400;
-			letter-spacing: 0;
-			padding: 1rem;
-			}
-
-			.main{
-			max-width: 1200px;
-			margin: 0 auto;
-			}
-
-			h1 {
-				font-size: 24px;
-				font-weight: 400;
-				text-align: center;
-			} */
-
 			img {
 			height: auto;
 			max-width: 100%;
@@ -2091,22 +2060,9 @@ input, select, textarea {
 
 	/* Testimonial */
 			
-			/* * {
-				box-sizing: border-box;
-			}
 			
-			body {
-				background-color: rgb(251, 250, 252);
-				display: flex;
-				font-family: 'Montserrat';
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
-				margin: 0;
-			} */
-	
 			.testimonials-container {
-				background-color: #476CE4;
+				background-color: #1A936F;
 				border-radius: 15px;
 				color: #FFFFFF;
 				font-family: 'Montserrat';
