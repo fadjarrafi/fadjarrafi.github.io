@@ -1,174 +1,193 @@
-/*
-	Highlights by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/*==================== MENU SHOW Y HIDDEN ====================*/
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
-(function($) {
+/*===== MENU SHOW =====*/
+/* Validate if constant exists */
+if (navToggle) {
+   navToggle.addEventListener('click', () =>{
+     navMenu.classList.add('show_menu')
+   }) 
+}
 
-	var	$window = $(window),
-		$body = $('body'),
-		$html = $('html');
+/*===== MENU HIDDEN =====*/
+/* Validate if constant exists */
+if (navClose) {
+    navClose.addEventListener('click', ()=> {
+        navMenu.classList.remove('show_menu')
+    })
+}
 
-	// Breakpoints.
-		breakpoints({
-			large:   [ '981px',  '1680px' ],
-			medium:  [ '737px',  '980px'  ],
-			small:   [ '481px',  '736px'  ],
-			xsmall:  [ null,     '480px'  ]
-		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav_link')
 
-	// Touch mode.
-		if (browser.mobile) {
+function linkAction(){
+    const navMenu = document.getElementById('.nav_menu')
+    navMenu.classList.remove(show_menu)
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
-			var $wrapper;
+/*==================== ACCORDION SKILLS ====================*/
+const skillsContent = document.getElementsByClassName('skills_content'),
+      skillsHeader = document.querySelectorAll('.skills_header')
 
-			// Create wrapper.
-				$body.wrapInner('<div id="wrapper" />');
-				$wrapper = $('#wrapper');
+function toggleSkills(){
+  let itemClass = this.parentNode.className
 
-				// Hack: iOS vh bug.
-					if (browser.os == 'ios')
-						$wrapper
-							.css('margin-top', -25)
-							.css('padding-bottom', 25);
+  for(i = 0; i < skillsContent.length; i++){
+    skillsContent[i].className = 'skills_content skills_close'
+  }
+  if (itemClass === 'skills_content skills_close') {
+    this.parentNode.className = 'skills_content skills_open'
+  }
+}
 
-				// Pass scroll event to window.
-					$wrapper.on('scroll', function() {
-						$window.trigger('scroll');
-					});
+skillsHeader.forEach((el) => {
+  el.addEventListener('click', toggleSkills)
+})
 
-			// Scrolly.
-				$window.on('load.hl_scrolly', function() {
+/*==================== QUALIFICATION TABS ====================*/
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContents = document.querySelectorAll('[data-content]')
 
-					$('.scrolly').scrolly({
-						speed: 1500,
-						parent: $wrapper,
-						pollOnce: true
-					});
+tabs.forEach(tab =>{
+  tab.addEventListener('click', () =>{
+    const target = document.querySelector(tab.dataset.target)
 
-					$window.off('load.hl_scrolly');
+    tabContents.forEach(tabContent =>{
+      tabContent.classList.remove('qualification_active')
+    })
+    target.classList.add('qualification_active')
 
-				});
+    Object.values(tab).forEach(tab =>{
+      tab.classList.remove('qualification_active')
+    })
+    tab.classList.add('qualification_active')
+  })
+})
 
-			// Enable touch mode.
-				$html.addClass('is-touch');
+/*==================== SERVICES MODAL ====================*/
+const modalViews = document.querySelectorAll('.services_modal'),
+      modalBtns = document.querySelectorAll('.services_button'),
+      modalCloses = document.querySelectorAll('.services_modal-close')
 
-		}
-		else {
+let modal = function(modalClick){
+  modalViews[modalClick].classList.add('active_modal')
+}
 
-			// Scrolly.
-				$('.scrolly').scrolly({
-					speed: 1500
-				});
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener('click', () => {
+    modal(i)
+  })
+})
 
-		}
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener('click', () =>{
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove('active_modal')
+    })
+  })
+})
 
-	// Header.
-		var $header = $('#header'),
-			$headerTitle = $header.find('header'),
-			$headerContainer = $header.find('.container');
+/*==================== PORTFOLIO SWIPER  ====================*/
+let swiperPortfolio = new Swiper('.portfolio_container', {
+  cssMode: true,
+  loop: true,
 
-		// Make title fixed.
-			if (!browser.mobile) {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+});
 
-				$window.on('load.hl_headerTitle', function() {
+/*==================== TESTIMONIAL ====================*/
+let swiperTestimonial = new Swiper('.testimonial_container', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
 
-					breakpoints.on('>medium', function() {
+  pagination: {
+    el: '.swiper-pagiantion',
+    clickable: true,
+    dynamicBullets: true
+  },
 
-						$headerTitle
-							.css('position', 'fixed')
-							.css('height', 'auto')
-							.css('top', '50%')
-							.css('left', '0')
-							.css('width', '100%')
-							.css('margin-top', ($headerTitle.outerHeight() / -2));
+  breakpoints:{
+    568:{
+      slidesPerView: 2,
+    }
+  }
+});
 
-					});
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
-					breakpoints.on('<=medium', function() {
+function scrollActive(){
+  const scrollY = window.pageYOffset 
 
-						$headerTitle
-							.css('position', '')
-							.css('height', '')
-							.css('top', '')
-							.css('left', '')
-							.css('width', '')
-							.css('margin-top', '');
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight,
+          sectionTop = current.offsetTop - 58,
+          sectionId = current.getAttribute('id')
 
-					});
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active_link')
+    } else {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active_link')
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive)
 
-					$window.off('load.hl_headerTitle');
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+function scrollHeader(){
+    const nav = document.getElementById('header')
+    if (this.scrollY >= 80) {
+      nav.classList.add('scroll_header');  
+    } else {
+      nav.classList.remove('scroll_header') 
+    }
+}
+window.addEventListener('scroll',scrollHeader)
 
-				});
+/*==================== SHOW SCROLL UP ====================*/ 
+function scrollUp(){
+  const scrollUp = document.getElementById('scroll-up')
+  if (this.scrollY >= 560) {
+    scrollUp.classList.add('show_scroll')
+  } else {
+    scrollUp.classList.remove('show_scroll')
+  }
+}
+window.addEventListener('scroll', scrollUp) 
+/*==================== DARK LIGHT THEME ====================*/ 
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
 
-			}
+//Previously selected topic(if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
 
-		// Scrollex.
-			breakpoints.on('>small', function() {
-				$header.scrollex({
-					terminate: function() {
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
 
-						$headerTitle.css('opacity', '');
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+}
 
-					},
-					scroll: function(progress) {
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle(darkTheme)
+  themeButton.classList.toggle(iconTheme)
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
-						// Fade out title as user scrolls down.
-							if (progress > 0.5)
-								x = 1 - progress;
-							else
-								x = progress;
 
-							$headerTitle.css('opacity', Math.max(0, Math.min(1, x * 2)));
-
-					}
-				});
-			});
-
-			breakpoints.on('<=small', function() {
-
-				$header.unscrollex();
-
-			});
-
-	// Main sections.
-		$('.main').each(function() {
-
-			var $this = $(this),
-				$primaryImg = $this.find('.image.primary > img'),
-				$bg,
-				options;
-
-			// No primary image? Bail.
-				if ($primaryImg.length == 0)
-					return;
-
-			// Create bg and append it to body.
-				$bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
-					.css('background-image', (
-						'url("assets/css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
-					))
-					.appendTo($body);
-
-			// Scrollex.
-				$this.scrollex({
-					mode: 'middle',
-					delay: 200,
-					top: '-10vh',
-					bottom: '-10vh',
-					init: function() { $bg.removeClass('active'); },
-					enter: function() { $bg.addClass('active'); },
-					leave: function() { $bg.removeClass('active'); }
-				});
-
-		});
-
-})(jQuery);
