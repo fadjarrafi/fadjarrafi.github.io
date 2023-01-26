@@ -698,7 +698,6 @@ img {
 }
 
 .services_content{
-  position: relative;
   background-color: var(--container-color);
   padding: 3.5rem .5rem 1.25rem 1.5rem;
   border-radius: .25rem;
@@ -1368,7 +1367,7 @@ img {
   }
 
   .services_container{
-    grid-template-columns: repeat(4,218px);
+    grid-template-columns: repeat(3,218px);
     justify-content: center;
   }
 
@@ -1455,7 +1454,7 @@ img {
     }
 
     .services_container{
-      grid-template-columns: repeat(4, 238px);
+      grid-template-columns: repeat(3, 238px);
     }
 
     .portfolio_content{

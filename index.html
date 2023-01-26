@@ -1,144 +1,158 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>fadjarrafi.be</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#home" class="nav_logo">
-                    Fadjar Irfan Rafi
-                </a>
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 
-                <div class="nav_menu" id="nav-menu">
-                    <ul class="nav_list">
-                        <li class="nav-item">
-                            <a href="#home" class="nav_link active_link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav_link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#skills" class="nav_link">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services" class="nav_link">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#portfolio" class="nav_link">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav_link">Contact Me</a>
-                        </li>
-                    </ul>
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-                    <div class="nav_close" id="nav-close">
-                        <i class="uil uil-times nav_close" id="nav-close"></i>
-                    </div>
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>fadjarrafi.be</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/world-wide-web.png">
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav_logo">
+                Fadjar Irfan Rafi
+            </a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav_link active_link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav_link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav_link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav_link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav_link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav_link">Contact Me</a>
+                    </li>
+                </ul>
+
+                <div class="nav_close" id="nav-close">
+                    <i class="uil uil-times nav_close" id="nav-close"></i>
+                </div>
+            </div>
+
+            <div class="nav_btns">
+                <!--===== THEME CHANGE BUTTON =====-->
+                <i class="uil uil-moon change_theme" id="theme-button"></i>
+
+                <div class="nav_toogle" id="nav-toggle">
+                    <i class="uil uil-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home_container container grid">
+                <div class="home_img">
+                    <img src="assets/img/main_photo.png" alt="">
                 </div>
 
-                <div class="nav_btns">
-                    <!--===== THEME CHANGE BUTTON =====-->
-                    <i class="uil uil-moon change_theme" id="theme-button"></i>
-
-                    <div class="nav_toogle" id="nav-toggle">
-                        <i class="uil uil-bars"></i>
+                <div class="home_data">
+                    <h1 class="home_title">Hi 🖐, I'am Fadjar </h1>
+                    <h3 class="home_subtitle">Web developer</h3>
+                    <p class="home_description">
+                        Fresh Graduate from Computer Science at Amikom University Yogyakarta. Experience in 1 year as a
+                        Backend Programmer Freelancer.
+                    </p>
+                    <a href="#contact" class="button button--flex">
+                        Contact Me <i class="uil uil-message button__icon"></i>
+                    </a>
+                    <div class="home_scroll">
+                        <a href="#about" class="home_scroll-button button--flex"></a>
+                        <i class="uil uil-mouse-alt home_scroll-mouse"></i>
+                        <span class="home_scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home_scroll-arrow"></i>
                     </div>
-                </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home_container container grid">
-                    <div class="home_img">
-                        <img src="assets/img/main_photo.png" alt="">
+                    <div class="home_social">
+                        <span class="home_social-follow">Follow Me</span>
+                        <div class="home_social-links">
+                            <a href="https://www.linkedin.com" target="_blank" rel=”noopener noreferrer”
+                                class="home_social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="https://www.dribbble.com" target="_blank" rel=”noopener noreferrer”
+                                class="home_social-icon">
+                                <i class="uil uil-dribbble"></i>
+                            </a>
+                            <a href="https://www.github.com" target="_blank" rel=”noopener noreferrer”
+                                class="home_social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="home_data">
-                        <h1 class="home_title">Hi, I'am Fadjar 🖐</h1>
-                        <h3 class="home_subtitle">Web developer</h3>
-                        <p class="home_description">
-                            Fresh Graduate from Computer Science at Amikom University Yogyakarta. Experience in 1 year as a Backend Programmer Freelancer.
-                        </p>
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
-                        </a>
-                        <div class="home_scroll">
+                    <div class="home_scroll_social">
+                        <div class="home_scroll1">
                             <a href="#about" class="home_scroll-button button--flex"></a>
                             <i class="uil uil-mouse-alt home_scroll-mouse"></i>
                             <span class="home_scroll-name">Scroll down</span>
                             <i class="uil uil-arrow-down home_scroll-arrow"></i>
                         </div>
-                        <div class="home_social">
-                            <span class="home_social-follow">Follow Me</span>
-                            <div class="home_social-links">
-                                <a href="https://www.linkedin.com" target="_blank" rel=”noopener noreferrer” class="home_social-icon">
+                        <div class="home_social1">
+                            <div class="home_social-link">
+                                <a href="https://www.linkedin.com/in/fadjar-irfan-rafi/" target="_blank"
+                                    rel="noopener noreferrer" class="home_social-icon">
                                     <i class="uil uil-linkedin-alt"></i>
                                 </a>
-                                <a href="https://www.dribbble.com" target="_blank" rel=”noopener noreferrer” class="home_social-icon">
-                                    <i class="uil uil-dribbble"></i>
-                                </a>
-                                <a href="https://www.github.com" target="_blank" rel=”noopener noreferrer”  class="home_social-icon">
+                                <a href="https://github.com/fadjarrafi" target="_blank" rel="noopener noreferrer"
+                                    class="home_social-icon">
                                     <i class="uil uil-github-alt"></i>
                                 </a>
+                                <a href="https://www.instagram.com/fadjar.rafi/" target="_blank"
+                                    rel="noopener noreferrer" class="home_social-icon">
+                                    <i class="uil uil-instagram"></i>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="home_scroll_social">
-                            <div class="home_scroll1">
-                                <a href="#about" class="home_scroll-button button--flex"></a>
-                                <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-                                <span class="home_scroll-name">Scroll down</span>
-                                <i class="uil uil-arrow-down home_scroll-arrow"></i>
-                            </div>
-                            <div class="home_social1">
-                                <div class="home_social-link">
-                                    <a href="https://www.linkedin.com/in/fadjar-irfan-rafi/" target="_blank" rel="noopener noreferrer" class="home_social-icon">
-                                        <i class="uil uil-linkedin-alt"></i>
-                                    </a>
-                                    <a href="https://github.com/fadjarrafi" target="_blank" rel="noopener noreferrer" class="home_social-icon">
-                                        <i class="uil uil-github-alt"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/fadjar.rafi/" target="_blank" rel="noopener noreferrer" class="home_social-icon">
-                                        <i class="uil uil-instagram"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
+
+
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-               <h2 class="section__title">About Me</h2>
-               <span class="section__subtitle">My introduction</span>
+        <!--==================== ABOUT ====================-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My introduction</span>
 
-               <div class="about_container container grid">
-                 <!-- <img src="assets/img/about-img.png" alt="" class="about_img"> -->
+            <div class="about_container container grid">
+                <!-- <img src="assets/img/about-img.png" alt="" class="about_img"> -->
 
-                 <div class="about_data">
+                <div class="about_data">
                     <p class="about_description">
-                        Hello, i am Fadjar Irfan Rafi. As a backend developer with over 1 year of experience, I have expertise in developing
-                        apps using PHP and Laravel framework. In my current role, I have been responsible for designing and implementing server-side logic, ensuring system performance and scalability. I have also been involved in troubleshooting and debugging issues, as well as maintaining and improving existing codebase.
+                        Hello, i am Fadjar Irfan Rafi. As a backend developer with over 1 year of experience, I have
+                        expertise in developing
+                        apps using PHP and Laravel framework. In my current role, I have been responsible for designing
+                        and implementing server-side logic, ensuring system performance and scalability. I have also
+                        been involved in troubleshooting and debugging issues, as well as maintaining and improving
+                        existing codebase.
                     </p>
                     <div class="about_info">
                         <div>
@@ -159,16 +173,16 @@
                             Download CV <i class="uil uil-download-alt button_icon"></i>
                         </a>
                     </div>
-                 </div>
-               </div>
-            </section>
+                </div>
+            </div>
+        </section>
 
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-              <h2 class="section__title">Tech Stack</h2>
-              <span class="section__subtitle">My technical skills</span>
+        <!--==================== SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Tech Stack</h2>
+            <span class="section__subtitle">My technical skills</span>
 
-              <div class="skills_container container grid">
+            <div class="skills_container container grid">
                 <div>
                     <!--=========== SKILL 1 ============-->
                     <div class="skills_content skills_open">
@@ -263,12 +277,12 @@
                     <div class="skills_content skills_open">
                         <div class="skills_header">
                             <i class="uil uil-server-network skills_icon"></i>
-                    
+
                             <div>
                                 <h1 class="skills_title">Database</h1>
                                 <!-- <span class="skills_subtitle">More than 5 years</span> -->
                             </div>
-                    
+
                             <i class="uil uil-angle-down skills_arrow"></i>
                         </div>
                         <div class="skills_list grid">
@@ -283,138 +297,138 @@
                         </div>
                     </div>
                 </div>
-              </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
-              <h2 class="section__title">Qualification</h2>
-              <span class="section__subtitle">My personal journel</span>
+        <!--==================== QUALIFICATION ====================-->
+        <section class="qualification section">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My personal journel</span>
 
-              <div class="qualification_container container">
+            <div class="qualification_container container">
                 <div class="qualification_tabs">
                     <div class="qualificaction_button button--flex qualification_active" data-target="#education">
-                      <i class="uil uil-graduation-cap qualification_icon"></i>
-                      Education
+                        <i class="uil uil-graduation-cap qualification_icon"></i>
+                        Education
                     </div>
                     <div class="qualificaction_button button--flex" data-target="#work">
-                     <i class="uil uil-briefcase-alt qualification-icon"></i>
-                     Work
+                        <i class="uil uil-briefcase-alt qualification-icon"></i>
+                        Work
                     </div>
                 </div>
 
                 <div class="qualification_sections">
                     <!--========== QUALIFICATION CONTENT 1 ==========-->
                     <div class="qualification_content qualification_active" data-content id="education">
-                      <!--============= QUALIFICATION 1 ===========-->  
-                      <div class="qualification_data">
-                        <div>
-                            <h3 class="qualification_title">Computer Science</h3>
-                            <span class="qualification_subtitle">Amikom University Yogyakarta</span>
-                            <div class="qualificaation_calender">
-                                <i class="uil uil-calender-alt"></i>
-                                2018 - 2022
+                        <!--============= QUALIFICATION 1 ===========-->
+                        <div class="qualification_data">
+                            <div>
+                                <h3 class="qualification_title">Computer Science</h3>
+                                <span class="qualification_subtitle">Amikom University Yogyakarta</span>
+                                <div class="qualificaation_calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2018 - 2022
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification_rounder"></span>
+                                <span class="qualification_line"></span>
                             </div>
                         </div>
-                        <div>
-                            <span class="qualification_rounder"></span>
-                            <span class="qualification_line"></span>
-                        </div>
-                      </div>
-                      <!--============= QUALIFICATION 2 ===========-->  
-                      <div class="qualification_data">
-                        <div></div>
+                        <!--============= QUALIFICATION 2 ===========-->
+                        <div class="qualification_data">
+                            <div></div>
 
-                        <div>
-                            <span class="qualification_rounder"></span>
-                            <span class="qualification_line"></span>
-                        </div>
+                            <div>
+                                <span class="qualification_rounder"></span>
+                                <span class="qualification_line"></span>
+                            </div>
 
-                        <div>
-                            <h3 class="qualification_title">Research Assistant</h3>
-                            <span class="qualification_subtitle">Amikom University Yogyakarta</span>
-                            <div class="qualificaation_calender">
-                                <i class="uil uil-calender-alt"></i>
-                                2021 - 2022
+                            <div>
+                                <h3 class="qualification_title">Research Assistant</h3>
+                                <span class="qualification_subtitle">Amikom University Yogyakarta</span>
+                                <div class="qualificaation_calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2021 - 2022
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--============= QUALIFICATION 3 ===========-->
+                        <div class="qualification_data">
+
+                            <div>
+                                <h3 class="qualification_title">Penggalian Potensi Mahasiswa</h3>
+                                <span class="qualification_subtitle">Amikom University Yogyakarta</span>
+                                <div class="qualificaation_calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2020 - 2021
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification_rounder"></span>
+                                <span class="qualification_line"></span>
                             </div>
                         </div>
-                        
-                      </div>
-                      <!--============= QUALIFICATION 3 ===========-->  
-                      <div class="qualification_data">
+                        <!--============= QUALIFICATION 4 ===========-->
+                        <div class="qualification_data">
+                            <div></div>
 
-                        <div>
-                            <h3 class="qualification_title">Penggalian Potensi Mahasiswa</h3>
-                            <span class="qualification_subtitle">Amikom University Yogyakarta</span>
-                            <div class="qualificaation_calender">
-                                <i class="uil uil-calender-alt"></i>
-                                2020 - 2021
+                            <div>
+                                <span class="qualification_rounder"></span>
+                                <!--<span class="qualification_line"></span>-->
                             </div>
-                        </div>
-
-                        <div>
-                            <span class="qualification_rounder"></span>
-                            <span class="qualification_line"></span>
-                        </div>
-                      </div>
-                      <!--============= QUALIFICATION 4 ===========-->  
-                      <div class="qualification_data">
-                        <div></div>
-
-                        <div>
-                            <span class="qualification_rounder"></span>
-                            <!--<span class="qualification_line"></span>-->
-                        </div>
 
 
-                        <div>
-                            <h3 class="qualification_title">FOSSIL (Free Open Source Software Interest League)</h3>
-                            <span class="qualification_subtitle">Amikom University Yogyakarta</span>
-                            <div class="qualificaation_calender">
-                                <i class="uil uil-calender-alt"></i>
-                                2019
+                            <div>
+                                <h3 class="qualification_title">FOSSIL (Free Open Source Software Interest League)</h3>
+                                <span class="qualification_subtitle">Amikom University Yogyakarta</span>
+                                <div class="qualificaation_calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    2019
+                                </div>
                             </div>
+
                         </div>
-                        
-                      </div>
                     </div>
                     <!--========== QUALIFICATION CONTENT 2 ==========-->
                     <div class="qualification_content" data-content id="work">
-                        <!--============= QUALIFICATION 1 ===========-->  
+                        <!--============= QUALIFICATION 1 ===========-->
                         <div class="qualification_data">
-                          <div>
-                              <h3 class="qualification_title">Backend Programmer</h3>
-                              <span class="qualification_subtitle">Kardusinfo - Yogyakarta</span>
-                              <div class="qualificaation_calender">
-                                  <i class="uil uil-calender-alt"></i>
-                                April 2021 - November 2022
-                              </div>
-                          </div>
-                          <div>
-                              <span class="qualification_rounder"></span>
-                              <span class="qualification_line"></span>
-                          </div>
+                            <div>
+                                <h3 class="qualification_title">Backend Programmer</h3>
+                                <span class="qualification_subtitle">Kardusinfo - Yogyakarta</span>
+                                <div class="qualificaation_calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    April 2021 - November 2022
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification_rounder"></span>
+                                <span class="qualification_line"></span>
+                            </div>
                         </div>
-                        <!--============= QUALIFICATION 2 ===========-->  
+                        <!--============= QUALIFICATION 2 ===========-->
                         <div class="qualification_data">
-                          <div></div>
-  
-                          <div>
-                              <span class="qualification_rounder"></span>
-                              <!-- <span class="qualification_line"></span> -->
-                          </div>
-  
-                          <div>
-                              <h3 class="qualification_title">Backend Programmer</h3>
-                              <span class="qualification_subtitle">CRSL - Yogyakarta</span>
-                              <div class="qualificaation_calender">
-                                  <i class="uil uil-calender-alt"></i>
-                                June 2021 - August 2022
-                              </div>
-                          </div>
-                          
+                            <div></div>
+
+                            <div>
+                                <span class="qualification_rounder"></span>
+                                <!-- <span class="qualification_line"></span> -->
+                            </div>
+
+                            <div>
+                                <h3 class="qualification_title">Backend Programmer</h3>
+                                <span class="qualification_subtitle">CRSL - Yogyakarta</span>
+                                <div class="qualificaation_calender">
+                                    <i class="uil uil-calender-alt"></i>
+                                    June 2021 - August 2022
+                                </div>
+                            </div>
+
                         </div>
-                        <!--============= QUALIFICATION 3 ===========-->  
+                        <!--============= QUALIFICATION 3 ===========-->
                         <!-- <div class="qualification_data">
                           <div>
                               <h3 class="qualification_title">Ui Designer</h3>
@@ -430,17 +444,17 @@
                           </div>
                         </div> -->
 
-                      </div>
+                    </div>
                 </div>
-              </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-              <h2 class="section__title">Stuff I do</h2> 
-              <span class="section__subtitle">What is offer</span> 
+        <!--==================== SERVICES ====================-->
+        <section class="services section" id="services">
+            <h2 class="section__title">Stuff I do</h2>
+            <span class="section__subtitle">What is offer</span>
 
-              <div class="services_container container grid">
+            <div class="services_container container grid">
                 <!--============== SERVICES 1 =============-->
                 <div class="services_content">
                     <div>
@@ -552,52 +566,16 @@
                         </div>
                     </div>
                 </div>
-                <!--============== SERVICES 4 =============-->
-                <div class="services_content">
-                    <div>
-                        <i class="uil uil-web-grid services_icon"></i>
-                        <h3 class="services_title">Branding <br> Designer</h3>
-                    </div>
-                    <span class="button button--flex button--small button--link services_button">
-                        View More
-                        <i class="uil uil-arrow-right button_icon"></i>
-                    </span>
 
-                    <div class="services_modal">
-                        <div class="services_modal-content">
-                            <h4 class="services_modal-title">Branding <br> Designer</h4>
-                            <i class="uil uil-times services_modal-close"></i>
+            </div>
+        </section>
 
-                            <ul class="services_modal-services grid">
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p>I develop the user interface</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p>Web page development</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p>I create ux element interactions</p>
-                                </li>
-                                <li class="services_modal-service">
-                                    <i class="uil uil-check-circle services_modal-icon"></i>
-                                    <p>I position your company brand.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-              </div>
-            </section>
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">Most recent work</span>
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-              <h2 class="section__title">Portfolio</h2>  
-              <span class="section__subtitle">Most recent work</span>
-
-              <div class="portfolio_container container swiper-container">
+            <div class="portfolio_container container swiper-container">
                 <div class="swiper-wrapper">
                     <!--============ PORTFOLIO 1 ==============-->
                     <div class="portfolio_content grid swiper-slide">
@@ -610,7 +588,7 @@
                                 and animated interactions.
                             </p>
                             <a href="#" class="button button--flex button--small portfolio_button">
-                                Demo 
+                                Demo
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
@@ -625,7 +603,7 @@
                                 POS App description
                             </p>
                             <a href="#" class="button button--flex button--small portfolio_button">
-                                Demo 
+                                Demo
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
@@ -641,7 +619,7 @@
                                 and animated interactions.
                             </p>
                             <a href="#" class="button button--flex button--small portfolio_button">
-                                Demo 
+                                Demo
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
@@ -657,33 +635,33 @@
                 </div>
                 <!--Add Pagination-->
                 <div class="swiper-pagination"></div>
-              </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-              <div class="project_bg">
+        <!--==================== PROJECT IN MIND ====================-->
+        <section class="project section">
+            <div class="project_bg">
                 <div class="project_container container grid">
                     <div class="project_data">
                         <h2 class="project_title">You have new project</h2>
                         <p class="project_description">Contact me now and get a 50% discounted</p>
                         <a href="#contact" class="button button--flex button--white">
-                            Contact Me 
+                            Contact Me
                             <i class="uil uil-message project_icon button_icon"></i>
                         </a>
                     </div>
 
                     <img src="assets/img/home.png" alt="" class="project_img">
                 </div>
-              </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-              <h2 class="section__title">Testimonial</h2>  
-              <span class="section__subtitle">My client saying</span>
+        <!--==================== TESTIMONIAL ====================-->
+        <section class="testimonial section">
+            <h2 class="section__title">Testimonial</h2>
+            <span class="section__subtitle">My client saying</span>
 
-              <div class="testimonial_container container swiper-container">
+            <div class="testimonial_container container swiper-container">
                 <div class="swiper-wrapper">
                     <!--========= TESTIMONIAL 1 ==========-->
                     <div class="testimonial_content swiper-slide">
@@ -721,7 +699,7 @@
                                     <span class="testimonial_client">Client</span>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <i class="uil uil-star testimonial_icon-star"></i>
                                 <i class="uil uil-star testimonial_icon-star"></i>
@@ -746,7 +724,7 @@
                                     <span class="testimonial_client">Client</span>
                                 </div>
                             </div>
-                            
+
                             <div>
                                 <i class="uil uil-star testimonial_icon-star"></i>
                                 <i class="uil uil-star testimonial_icon-star"></i>
@@ -760,19 +738,19 @@
                             quality and attention and support 24 hours a day.
                         </p>
                     </div>
-                    
+
                 </div>
                 <!--Add Pagination-->
                 <div class="swiper-pagination swiper-pagination-testimonial"></div>
-              </div>
-            </section>
+            </div>
+        </section>
 
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
-              <h2 class="section__title">Contact Me</h2>
-              <span class="section__subtitle">Get in touch</span>
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in touch</span>
 
-              <div class="contact_container container grid">
+            <div class="contact_container container grid">
                 <div>
                     <div class="contact_information">
                         <i class="uil uil-phone contact_icon"></i>
@@ -821,18 +799,18 @@
                     </div>
                     <div>
                         <a href="#" class="button button--flex">
-                            Send Message 
+                            Send Message
                             <i class="uil uil-message button_icon"></i>
                         </a>
                     </div>
                 </form>
-              </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-          <div class="footer_bg">
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer_bg">
             <div class="footer_container container grid">
                 <div>
                     <h1 class="footer_title">Fadjar Irfan Rafi</h1>
@@ -850,10 +828,12 @@
                     </li>
                 </ul>
                 <div class="footer_socails">
-                    <a href="https://www.linkedin.com" target="_blank" rel=”noopener noreferrer” class="home_social-icon">
+                    <a href="https://www.linkedin.com" target="_blank" rel=”noopener noreferrer”
+                        class="home_social-icon">
                         <i class="uil uil-linkedin-alt"></i>
                     </a>
-                    <a href="https://www.dribbble.com" target="_blank" rel=”noopener noreferrer” class="home_social-icon">
+                    <a href="https://www.dribbble.com" target="_blank" rel=”noopener noreferrer”
+                        class="home_social-icon">
                         <i class="uil uil-dribbble"></i>
                     </a>
                     <a href="https://www.github.com" target="_blank" rel=”noopener noreferrer” class="home_social-icon">
@@ -862,18 +842,19 @@
                 </div>
             </div>
             <p class="footer_copy">&#169; Share Tutorials. All right reserved</p>
-          </div>
-        </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-          <i class="uil uil-arrow-up scrollup_icon"></i>
-        </a>
+        </div>
+    </footer>
 
-        <!--==================== SWIPER JS ====================-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup_icon"></i>
+    </a>
 
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!--==================== SWIPER JS ====================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
