@@ -440,12 +440,12 @@ img {
 }
 
 /*==================== ABOUT ====================*/
-.about_img{
+/* .about_img{
   width: 200px;
   border-radius: .5rem;
   justify-self: center;
   align-self: center;
-}
+} */
 
 .about_description{
   text-align: center;
@@ -484,6 +484,22 @@ img {
   row-gap: 0;
 }
 
+.skills_box{
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+
+.skills_img {
+  width: 50%;
+  object-fit: cover;
+}
+
 .skills_header{
   display: flex;
   align-items: center;
@@ -511,6 +527,9 @@ img {
 }
 
 .skills_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   row-gap: 1.5rem;
   padding-left: 2.7rem;
 }
@@ -1181,7 +1200,7 @@ img {
     grid-column: initial;
   }
 
-  .about_container,
+  /* .about_container, */
   .skills_container,
   .portfolio_content,
   .project_container,
